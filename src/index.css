@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+@media screen and (max-width: 539px) {
+    .description, .capacity, .status {
+        display: none;
+    }    
+}
+
+@media screen and (max-width: 599px) {
+    .description, .status {
+        display: none;
+    }    
+}
+
+@media screen and (max-width: 767px) {
+    .status {
+        display: none;
+    }    
+}
+
+@media screen and (min-width: 1280px) {
+    .title, .location, .date, .status {
+        width: 170px;
+    }
+    
+    .description {
+        width: 250px;
+    }   
+}
