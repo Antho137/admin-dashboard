@@ -14,8 +14,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/#event" element={<Event />} />
-        <Route path="/#report" element={<Report />} />
+        <Route path="/event" element={<Event />} />
+        <Route path="/report" element={<Report />} />
       </Routes>
       <Footer />
     </HashRouter >

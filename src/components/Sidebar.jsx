@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavHashLink as Link } from 'react-router-hash-link';
+import { NavHashLink, HashLink as Link } from 'react-router-hash-link';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BiSolidCog, BiSolidDashboard, BiSolidDetail, BiSolidReport } from "react-icons/bi";
 
@@ -31,7 +31,7 @@ const Sidebar = () => {
             <ul className='hidden text-sm lg:pt-6 xl:text-lg lg:flex flex-col justify-start items-start gap-5 font-light sidebar'>
                 <li className='flex justify-start items-center gap-1'>
                     <BiSolidDashboard />
-                    <Link 
+                    <NavHashLink smooth 
                         to="/#" 
                         className={({ isActive }) => isActive
                             ? "bg-yellow-500 text-white px-3 pt-0.5 pb-1.5 rounded"
@@ -39,23 +39,32 @@ const Sidebar = () => {
                         }
                     >
                         Dashboard
-                    </Link>
+                    </NavHashLink>
                 </li>
                 <li className='flex justify-start items-center gap-1'>
                     <BiSolidDetail />
-                    <Link to="/#event" className="px-2">
+                    <Link smooth 
+                        to="/#event" 
+                        className="px-2"
+                    >
                         Events
                     </Link>
                 </li>
                 <li className='flex justify-start items-center gap-1'>
                     <BiSolidReport />
-                    <Link to="/#report" className="px-2">
+                    <Link smooth  
+                        to="/#report" 
+                        className="px-2"
+                    >
                         Reports
                     </Link>
                 </li>
                 <li className='flex justify-start items-center gap-1'>
                     <BiSolidCog />
-                    <Link to="/" className="px-2">
+                    <Link smooth 
+                        to="/" 
+                        className="px-2"
+                    >
                         Settings
                     </Link>
                 </li>
@@ -69,7 +78,7 @@ const Sidebar = () => {
             <ul className="bg-blue-300 text-sm mt-4 px-5 py-2 flex flex-col justify-start items-start gap-5 lg:hidden menuOpen">
                 <li className='flex justify-start items-center gap-1 my-1'>
                     <BiSolidDashboard className="text-blue-900" />
-                    <Link 
+                    <NavHashLink smooth 
                         to="/"
                         className={({ isActive }) => isActive
                             ? "text-yellow-900"
@@ -77,23 +86,32 @@ const Sidebar = () => {
                         }
                     >
                         Dashboard
-                    </Link>
+                    </NavHashLink>
                 </li>
                 <li className='flex justify-start items-center gap-1 my-1'>
                     <BiSolidDetail className="text-blue-900" />
-                    <Link to="/#event" className="text-blue-900">
-                        Event
+                    <Link 
+                        to="/#event" 
+                        className="text-blue-900"
+                    >
+                        Events
                     </Link>
                 </li>
                 <li className='flex justify-start items-center gap-1 my-1'>
                     <BiSolidReport className="text-blue-900" />
-                    <Link to="/#report" className="text-blue-900">
-                        Report
+                    <Link smooth 
+                        to="/#report" 
+                        className="text-blue-900"
+                    >
+                        Reports
                     </Link>
                 </li>
                 <li className='flex justify-start items-center gap-1 my-1'>
                     <BiSolidCog className="text-blue-900" />
-                    <Link to="/#" className="text-blue-900">
+                    <Link smooth 
+                        to="/" 
+                        className="text-blue-900"
+                    >
                         Settings
                     </Link>
                 </li>
