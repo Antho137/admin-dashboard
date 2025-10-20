@@ -1,4 +1,4 @@
-import { HashRouter , Routes, Route } from "react-router-dom";
+import { BrowserRouter , Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Dashboard from "./pages/Dashboard";
@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 function App() {
 
   return (
-    <HashRouter basename="/#/">
+    <BrowserRouter basename="/admin-dashboard/">
       <Sidebar />
       <Header />
       <Routes>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/report" element={<Report />} />
       </Routes>
       <Footer />
-    </HashRouter >
+    </BrowserRouter >
   )
 }
 
