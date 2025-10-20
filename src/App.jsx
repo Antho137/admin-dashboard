@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 function App() {
 
   return (
-    <HashRouter basename="/admin-dasboard/">
+    <HashRouter basename="/admin-dashboard/">
       <Sidebar />
       <Header />
       <Routes>
